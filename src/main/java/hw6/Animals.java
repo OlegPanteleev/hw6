@@ -3,11 +3,7 @@ package hw6;
 public abstract class Animals {
 
     protected String name;
-    static int counter;
-
-    {
-        counter = 0;
-    }
+    protected static int counter;
 
     public int getCounter() {
         return counter;
