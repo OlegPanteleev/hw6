@@ -13,6 +13,7 @@ public class ClassHW6 {
         animalsArray[5] = new DogHW6("Бублик", 9, 550);
 
         animalsInfo(animalsArray);
+        animalsCounter(animalsArray);
     }
 
     static void animalsInfo(Animals[] animalsArray) {
@@ -37,13 +38,14 @@ public class ClassHW6 {
             } else if (animals instanceof DogHW6) {
                 System.out.printf("Собака %s пробежела: %d m.\n", ((DogHW6) animals).name, ((DogHW6) animals).runLenght);
             }
-
         }
-
     }
 
-    static void animalCounter(Animal[] animalsArray) {
-
+    static void animalsCounter(Animals[] animalsArray) {
+        for (Animals animals : animalsArray) {
+            Animals.counter++;
+        }
+        System.out.println("-----------------------------------------");
+        System.out.printf("Всего животных: %d", Animals.counter);
     }
-
 }

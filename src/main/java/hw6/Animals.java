@@ -3,10 +3,10 @@ package hw6;
 public abstract class Animals {
 
     protected String name;
-    protected int counter;
+    static int counter;
 
     {
-        ++counter;
+        counter = 0;
     }
 
     public int getCounter() {
