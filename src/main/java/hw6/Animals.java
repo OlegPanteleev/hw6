@@ -1,8 +1,21 @@
 package hw6;
 
-public class Animals {
+public abstract class Animals {
 
-    public String name;
+    protected String name;
+    protected int counter;
+
+    {
+        ++counter;
+    }
+
+    public int getCounter() {
+        return counter;
+    }
+
+    public void setCounter(int counter) {
+        this.counter = counter;
+    }
 
     public String getName() {
         return name;
@@ -11,7 +24,8 @@ public class Animals {
     public void setName(String name) {
         this.name = name;
     }
-    Animals(String name){
+
+    public Animals(String name) {
         this.name = name;
     }
 
